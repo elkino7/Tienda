@@ -1,2 +1,2 @@
 # Tienda
-Implementado con micorservicios.
+Implementado con microservicios.
