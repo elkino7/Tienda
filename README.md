@@ -59,7 +59,7 @@ Diagramas de Arquitectura Poryecto Tienda de Barrio.
 ![](Imágenes/Resumencapas.png)
 
 ## Uso de Aplicación 
-![](Imágenes/UsoAplicación .png)
+![](Imágenes/UsoAplicación.png)
 
 ## Uso de infraestructura
 ![](Imágenes/Usoinfraestructura.png)
