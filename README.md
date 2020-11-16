@@ -28,9 +28,6 @@ Diagramas de Arquitectura Poryecto Tienda de Barrio.
 ## Cooperación de Proceso de Negocio
 ![](Imágenes/CooperaciónProcesoNegocio.png)
 
-## Cooperación de Proceso de Negocio
-![](Imágenes/CooperaciónProcesoNegocio.png)
-
 ## Estructura de Aplicaciones
 ![](Imágenes/EstructuraAplicaciones.png)
 
