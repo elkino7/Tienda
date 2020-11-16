@@ -9,12 +9,15 @@ Implementado con microservicios.
 > Elkin Ortiz Salazar
 
 Diagramas de Arquitectura Poryecto Tienda de Barrio.
-
-
-
-## Vista de Aplicación.
 ```sh
 
 ```
+
+## Vista de Aplicación.
 ![](Imágenes/Aplicación.png)
 
+## Vista Contibución de Objetivos
+![](Imágenes/Contribución Objetivos.png)
+
+## Cooperación de Actores
+![](Imágenes/Cooperación de Aplicación.png)
