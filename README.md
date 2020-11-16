@@ -16,5 +16,5 @@ Diagramas de Arquitectura Poryecto Tienda de Barrio.
 ```sh
 
 ```
-![](imágenes/Aplicación.bmp)
+![](imágenes/Aplicación.png)
 
