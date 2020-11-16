@@ -17,7 +17,7 @@ Diagramas de Arquitectura Poryecto Tienda de Barrio.
 ![](Imágenes/Aplicación.png)
 
 ## Vista Contibución de Objetivos
-![](Imágenes/Contribución Objetivos.png)
+![](Imágenes/ContribuciónObjetivos.png)
 
 ## Cooperación de Actores
 ![](Imágenes/Cooperación de Aplicación.png)
