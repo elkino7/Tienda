@@ -20,11 +20,13 @@ class clientes(db.Model):
 @app.route("/clientes")
 
 def show_all():
-    listaclientes = clientes.query.all() 
-    return listaclientes
+    return render_template('show_all.html', lclientes = clientes.query.all() )
 
 # def clientes():
 #     return 
 
 if __name__ == "__main__":
+    db.create_all()
     app.run(host='0.0.0.0',debug=True)
+
+  
