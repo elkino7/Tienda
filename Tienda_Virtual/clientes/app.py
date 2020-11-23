@@ -1,4 +1,4 @@
-from flask import Flask, request, flash, url_for, redirect, render_template
+from flask import Flask, request, flash, url_for, redirect, render_template, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -13,14 +13,16 @@ class clientes(db.Model):
    name = db.Column(db.String(100))
 
    def __init__(self, name):       
-       self.name = name
-       
-
+       self.name = name       
 
 @app.route("/clientes")
-
 def show_all():
-    return render_template('show_all.html', lclientes = clientes.query.all() )
+      list = [
+            {'id': 1, 'name': 'Tony Stark'},
+            {'id': 2, 'name': 'Steve Rogers'},
+            {'id': 3, 'name': 'Bruce Banner'}
+            ]
+      return jsonify(results = list)
 
 # def clientes():
 #     return 
@@ -28,5 +30,3 @@ def show_all():
 if __name__ == "__main__":
     db.create_all()
     app.run(host='0.0.0.0',debug=True)
-
-  
