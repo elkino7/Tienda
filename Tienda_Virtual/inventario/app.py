@@ -1,18 +1,34 @@
-from flask import Flask,jsonify
+from flask import Flask, request, flash, url_for, redirect, render_template,jsonify
+from flask_sqlalchemy import SQLAlchemy
+from flask_marshmallow import Marshmallow
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///inventario.sqlite3'
+app.config['SECRET_KEY'] = "random string"
+
+db = SQLAlchemy(app)
+ma = Marshmallow(app)
+
+class inventario(db.Model):
+      id = db.Column('producto_id', db.Integer, primary_key = True)
+      nombre = db.Column(db.String(100))
+      precio = db.Column(db.Integer)
+      cantidad = db.Column(db.Integer)
+
+      def __init__(self, nombre,precio,cantidad):
+            self.name = name
+
+class inventarioSchema(ma.ModelSchema):
+      class Meta:
+            model = inventario
 
 @app.route("/inventario")
-def show_all():
-      list = [
-            {'id': 1, 'name': 'Libro 1','price':500000,'quantity':2},
-            {'id': 1, 'name': 'Libro 2','price':21000,'quantity':5666},
-            {'id': 1, 'name': 'Libro 3','price':60000,'quantity':100},
-            {'id': 1, 'name': 'Libro 4','price':251000,'quantity':18},
-            {'id': 1, 'name': 'Libro 5','price':10000,'quantity':147},
-            ]
-      return jsonify(results = list)
-
+def show_inv():     
+      productoslista = inventario.query.all() 
+      inventario_schema = inventarioSchema(many = True)
+      output = inventario_schema.dump(productoslista)
+      return jsonify(output)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0',debug=True)
+      db.create_all()
+      app.run(host='0.0.0.0',debug=True)

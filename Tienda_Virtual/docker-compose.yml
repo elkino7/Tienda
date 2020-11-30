@@ -8,6 +8,7 @@ services:
         links:
             - inventario
             - clientes
+            - pedido
         ports:
             - "8080:80"
 
@@ -16,3 +17,6 @@ services:
 
     clientes:
         build: ./clientes
+    
+    pedido:
+        build: ./pedido
