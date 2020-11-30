@@ -1,5 +1,5 @@
 # Tienda
-Implementado con microservicios.
+Python _ DockerFile
 
 
 > Ingry Nathaly Salamanca Rativa
